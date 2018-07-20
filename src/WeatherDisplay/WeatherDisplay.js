@@ -8,7 +8,8 @@ constructor() {
     }
 }
 
-    componentDidMount() {
+    render() {
+
         const zip = this.props.zip;
         const URL = "http://api.openweathermap.org/data/2.5/weather?q=" +
           zip +
@@ -16,9 +17,7 @@ constructor() {
         fetch(URL).then(res => res.json()).then(json => {
           this.setState({ weatherData: json });
         });
-}
 
-    render() {
         const weatherData = this.state.weatherData;
         if (!weatherData) return <div>Loading</div>;
         const weather = weatherData.weather[0];
@@ -33,6 +32,7 @@ constructor() {
             <p>High: {weatherData.main.temp_max}°</p>
             <p>Low: {weatherData.main.temp_min}°</p>
             <p>Wind Speed: {weatherData.wind.speed} mi/hr</p>
+            <p>Pressure: {weatherData.main.pressure} hPa</p>
           </div>
     );
         

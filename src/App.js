@@ -6,7 +6,7 @@ import WeatherDisplay from './WeatherDisplay/WeatherDisplay'
 class App extends Component {
   state = {
     places: [
-      { name: "Palo Alto", zip: "94303" },
+      { name: "Ochko korovy", zip: "94303" },
       { name: "San Jose", zip: "94088" },
       { name: "Santa Cruz", zip: "95062" },
       { name: "Honolulu", zip: "96803" }
