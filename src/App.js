@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
 import WeatherDisplay from './WeatherDisplay/WeatherDisplay'
-import "bootstrap/dist/css/bootstrap.css";
+// import "bootstrap/dist/css/bootstrap.css";
 import { Navbar, NavItem, Nav, Grid, Row, Col } from "react-bootstrap";
 
 
@@ -12,6 +12,14 @@ class App extends Component {
       { name: "Kyiv", zip: "703448" },
       { name: "Dnipro", zip: "709930" },
       { name: "Kharkiv", zip: "706483" },
+      { name: "Kherson", zip: "706448" },
+      { name: "Kherson", zip: "706448" },
+      { name: "Kherson", zip: "706448" },
+      { name: "Kherson", zip: "706448" },
+      { name: "Kherson", zip: "706448" },
+      { name: "Kherson", zip: "706448" },
+      { name: "Kherson", zip: "706448" },
+      { name: "Kherson", zip: "706448" },
       { name: "Kherson", zip: "706448" }
     ],
     activePlace: 0
@@ -41,7 +49,7 @@ class App extends Component {
                     }}
                   >
                     {this.state.places.map((place, index) => (
-                      <NavItem key={index} eventKey={index}>{place.name}</NavItem>
+                      <NavItem className="navPill" key={index} eventKey={index}>{place.name}</NavItem>
                     ))}
                   </Nav>
                 </Col>
