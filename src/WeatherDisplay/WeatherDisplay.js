@@ -7,16 +7,15 @@ class WeatherDisplay extends Component {
 
     render() {
         const zip = this.props.zip;
-        const lang = 'zh_cn';
-        // const URL = "http://api.openweathermap.org/data/2.5/weather?id=" +
-        //   zip +
-        //   "&lang=" + lang + "&appid=e798d8a91519874ea95daee612e9a0cd&units=metric";
-        // fetch(URL).then(res => res.json()).then(json => {
-        //   this.setState({ weatherData: json });
-        // });
+        const URL = "http://api.openweathermap.org/data/2.5/weather?id=" +
+          zip +
+          "&appid=e798d8a91519874ea95daee612e9a0cd&units=metric";
+        fetch(URL).then(res => res.json()).then(json => {
+          this.setState({ weatherData: json });
+        });
         
         const weatherData = this.state.weatherData;
-        if (!weatherData) return <div>Loading</div>;
+        if (!weatherData) return <div>Loading...</div>;
         const weather = weatherData.weather[0];
         const iconUrl = "http://openweathermap.org/img/w/" + weather.icon + ".png";
         return (

@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import './App.css';
+import Header from './Header/Header'
 import WeatherDisplay from './WeatherDisplay/WeatherDisplay'
-// import "bootstrap/dist/css/bootstrap.css";
-import { Navbar, NavItem, Nav, Grid, Row, Col } from "react-bootstrap";
+import { NavItem, Nav, Grid, Row, Col } from "react-bootstrap";
 
 
 
@@ -12,14 +12,6 @@ class App extends Component {
       { name: "Kyiv", zip: "703448" },
       { name: "Dnipro", zip: "709930" },
       { name: "Kharkiv", zip: "706483" },
-      { name: "Kherson", zip: "706448" },
-      { name: "Kherson", zip: "706448" },
-      { name: "Kherson", zip: "706448" },
-      { name: "Kherson", zip: "706448" },
-      { name: "Kherson", zip: "706448" },
-      { name: "Kherson", zip: "706448" },
-      { name: "Kherson", zip: "706448" },
-      { name: "Kherson", zip: "706448" },
       { name: "Kherson", zip: "706448" }
     ],
     activePlace: 0
@@ -29,15 +21,11 @@ class App extends Component {
     const activePlace = this.state.activePlace;
     return (
       <div>
-            <Navbar>
-              <Navbar.Header>
-                <Navbar.Brand>
-                  React Simple Weather App
-                </Navbar.Brand>
-              </Navbar.Header>
-            </Navbar>
             <Grid>
-              <Row>
+
+            <Header />
+            
+            <Row>
                 <Col md={4} sm={4}>
                   <h3>Select a city</h3>
                   <Nav
@@ -49,7 +37,7 @@ class App extends Component {
                     }}
                   >
                     {this.state.places.map((place, index) => (
-                      <NavItem className="navPill" key={index} eventKey={index}>{place.name}</NavItem>
+                      <NavItem key={index} eventKey={index}>{place.name}</NavItem>
                     ))}
                   </Nav>
                 </Col>
