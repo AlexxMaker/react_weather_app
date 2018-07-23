@@ -1,0 +1,45 @@
+.weather-data {
+    width: 60%;
+    margin: 0 auto;
+}
+
+.weather-current {
+    width: 50%;
+    display: inline-block;
+}
+
+.weather-numbers {
+    width: 50%;
+    display: inline-block;
+}
+
+.left, .right {
+    /* display: inline-block; */
+    width: 50%;
+}
+
+.left {
+    /* background-color: red; */
+    width: 50%;
+}
+
+.right {
+    /* background-color: yellow; */
+}
+
+.temp {
+    font-size: 50px;
+    margin-bottom: 30px;
+}
+
+.weather-current.h2 {
+    text-align: center;
+}
+
+.main {
+    width: 100%;
+}
+
+.icon {
+    width: 80px;
+}
