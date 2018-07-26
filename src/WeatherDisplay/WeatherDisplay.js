@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import "./WeatherDisplay.css";
-import {PageHeader} from 'react-bootstrap'
+import {Well, Grid, Row, Col} from 'react-bootstrap'
 
 class WeatherDisplay extends Component {
   state = {
@@ -22,40 +22,40 @@ class WeatherDisplay extends Component {
         const iconUrl = "http://openweathermap.org/img/w/" + weather.icon + ".png";
         const currentTemp = Math.round(weatherData.main.temp);
         return (
-          <div className="weather-wrapper">
-            <div className="weather-data">
-              <div className="weather-header">
-                <PageHeader>
-                  
-                    <h1>{weatherData.name} - {weatherData.sys.country}</h1>
-                  
-                </PageHeader>
-            </div>
+          <Grid className="weather-data">
+            <Row>
+              <Col md={12}>
+                <Well bsSize="small">
+                    <h2>{weatherData.name} - {weatherData.sys.country}</h2>
+                </Well>
+                </Col>
+            </Row>
 
             <div>
+              <Row>
+            <Col md={6} sm={6} xs={12}>
+            <Well>
               <div className="weather-current">
-              <div className="left">
                 <img className="icon" src={iconUrl} alt={weatherData.description} />
+                <p className="temp"><span className="orange">{currentTemp}</span>°C</p>
+                <h1>{weather.main}</h1>
               </div>
+              </Well>
+              </Col>
               
-              <div className="right">
-                <h1 className="temp">{currentTemp}C°</h1>
-              </div>
-              <div className="main">
-                <h2>{weather.main}</h2>
-              </div> 
-              </div>
-
+              <Col md={6} sm={6} xs={12}>
+              
               <div className="weather-numbers">
-                <p>High: {weatherData.main.temp_max}°</p>
-                <p>Low: {weatherData.main.temp_min}°</p>
+                <p>High: {weatherData.main.temp_max}°C</p>
+                <p>Low: {weatherData.main.temp_min}°C</p>
                 <p>Wind Speed: {weatherData.wind.speed} km/hr</p>
                 <p>Pressure: {weatherData.main.pressure} hPa</p>
               </div>
-
+            
+              </Col>
+              </Row>
             </div>
-            </div>
-          </div>
+          </Grid>
     );
         
     }

@@ -1,43 +1,23 @@
 .weather-data {
-    width: 60%;
+    width: 80%;
     margin: 0 auto;
 }
 
-.weather-current {
-    width: 50%;
-    display: inline-block;
-}
-
 .weather-numbers {
-    width: 50%;
-    display: inline-block;
+    padding-top: 80px;
 }
-
-.left, .right {
-    /* display: inline-block; */
-    width: 50%;
-}
-
-.left {
-    /* background-color: red; */
-    width: 50%;
-}
-
-.right {
-    /* background-color: yellow; */
-}
-
 .temp {
     font-size: 50px;
+    font-family: Avenir Next, Bold;
     margin-bottom: 30px;
 }
 
-.weather-current.h2 {
-    text-align: center;
+.orange {
+    color: orange;
 }
 
-.main {
-    width: 100%;
+.weather-current.h3 {
+    text-align: center;
 }
 
 .icon {
