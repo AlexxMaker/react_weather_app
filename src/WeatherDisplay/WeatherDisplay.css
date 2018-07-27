@@ -1,0 +1,25 @@
+.weather-data {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.weather-numbers {
+    padding-top: 80px;
+}
+.temp {
+    font-size: 50px;
+    font-family: Avenir Next, Bold;
+    margin-bottom: 30px;
+}
+
+.orange {
+    color: orange;
+}
+
+.weather-current.h3 {
+    text-align: center;
+}
+
+.icon {
+    width: 80px;
+}
