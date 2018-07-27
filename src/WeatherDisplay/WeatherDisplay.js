@@ -25,9 +25,7 @@ class WeatherDisplay extends Component {
           <Grid className="weather-data">
             <Row>
               <Col md={12}>
-                <Well bsSize="small">
-                    <h2>{weatherData.name} - {weatherData.sys.country}</h2>
-                </Well>
+                    <h2> Weather in {weatherData.name} - {weatherData.sys.country}</h2>
                 </Col>
             </Row>
 
