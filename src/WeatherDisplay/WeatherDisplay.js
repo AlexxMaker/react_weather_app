@@ -23,22 +23,24 @@ class WeatherDisplay extends Component {
         const currentTemp = Math.round(weatherData.main.temp);
         return (
           <Grid className="weather-data">
+          
             <Row>
               <Col md={12}>
                     <h2> Weather in {weatherData.name} - {weatherData.sys.country}</h2>
                 </Col>
             </Row>
 
-            <div>
+            
+            <Well>
               <Row>
             <Col md={6} sm={6} xs={12}>
-            <Well>
+            
               <div className="weather-current">
                 <img className="icon" src={iconUrl} alt={weatherData.description} />
                 <p className="temp"><span className="orange">{currentTemp}</span>°C</p>
                 <h1>{weather.main}</h1>
               </div>
-              </Well>
+              
               </Col>
               
               <Col md={6} sm={6} xs={12}>
@@ -51,8 +53,10 @@ class WeatherDisplay extends Component {
               </div>
             
               </Col>
+              
               </Row>
-            </div>
+              </Well>
+            
           </Grid>
     );
         

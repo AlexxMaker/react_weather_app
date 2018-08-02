@@ -1,10 +1,10 @@
 .weather-data {
-    width: 80%;
+    width: 100%;
     margin: 0 auto;
 }
 
 .weather-numbers {
-    padding-top: 80px;
+    padding-top: 15%;
 }
 .temp {
     font-size: 50px;
