@@ -1,14 +1,8 @@
 import React from 'react';
-import {Row, PageHeader} from 'react-bootstrap';
+import './Header.css'
 
 const Header = () => {
-    return (
-        <Row>
-            <PageHeader bsClass='page-header'>
-                <h1>Check the current weather</h1>
-            </PageHeader>
-        </Row>
-    );
+    return (<h1 className="head">Check the current weather</h1>);
 }
 
 export default Header;

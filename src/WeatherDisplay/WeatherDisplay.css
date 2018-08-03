@@ -1,10 +1,10 @@
 .weather-data {
-    width: 100%;
+    width: 85% !important;
     margin: 0 auto;
 }
 
 .weather-numbers {
-    padding-top: 15%;
+    padding-top: 10%;
 }
 .temp {
     font-size: 50px;
@@ -16,10 +16,25 @@
     color: orange;
 }
 
+.weather-current {
+    border-right: 1px solid gray;
+}
+
 .weather-current.h3 {
     text-align: center;
 }
 
 .icon {
     width: 80px;
+}
+
+@media (max-width: 767px) {
+    .weather-current {
+        border-right: none;
+        border-bottom: 1px solid gray;
+    }
+
+    .weather-data {
+        width: 100% !important;
+    }
 }

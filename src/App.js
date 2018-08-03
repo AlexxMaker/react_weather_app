@@ -22,12 +22,10 @@ class App extends Component {
   render() {
     const activePlace = this.state.activePlace;
     return (
-      <div>
+      
             <Grid>
-
-            <Header />
-            
-            <Row>
+              <Header />
+                <Row>
                 <Col md={4} sm={4} className="nav-col">
                   <h3>Select a city</h3>
                   <Nav
@@ -48,7 +46,7 @@ class App extends Component {
                 </Col>
               </Row>
             </Grid>
-      </div>
+      
   )}
 }
 

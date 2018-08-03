@@ -11,7 +11,7 @@ class WeatherDisplay extends Component {
         const zip = this.props.zip;
         const URL = "http://api.openweathermap.org/data/2.5/weather?id=" +
           zip +
-          "&appid=45f336bc325b0b64d6431d7166aa1df6&units=metric";
+          "&appid=e798d8a91519874ea95daee612e9a0cd&units=metric";
         fetch(URL).then(res => res.json()).then(json => {
           this.setState({ weatherData: json });
         });
