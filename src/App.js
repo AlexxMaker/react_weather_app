@@ -14,7 +14,9 @@ class App extends Component {
       { name: "Kharkiv", zip: "706483" },
       { name: "Kherson", zip: "706448" },
       { name: "London", zip: "2643743"},
-      { name: "New York", zip: "5128638" }
+      { name: "New York", zip: "5128638" },
+      { name: "Kabul", zip: "1138958" },
+      { name: "Kunduz", zip: "1135689" }
     ],
     activePlace: 0
   }
